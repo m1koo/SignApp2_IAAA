@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="host">http://162.105.180.28/pkukf/Android.ashx</string>
+    <string name="pkuHost">http://162.105.180.28/pkukf</string>
+    <string name="defaultAccount">AN123456</string>
+
+</resources>

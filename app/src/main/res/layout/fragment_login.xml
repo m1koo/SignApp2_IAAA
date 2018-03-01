@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        title=""
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorAccent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="试剂管理平台"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_login_logo"
+        app:layout_heightPercent="8.6%h"
+        app:layout_marginTopPercent="10.3%h"
+        app:layout_widthPercent="57.4%w" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        app:layout_heightPercent="12.8%w"
+        app:layout_marginTopPercent="9%h"
+        app:layout_widthPercent="95.7%w">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/edit_username" />
+
+        <EditText
+            android:id="@+id/ed_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="请输入账号"
+            android:textCursorDrawable="@drawable/cursor_login"
+            app:layout_marginLeftPercent="19.2%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        app:layout_heightPercent="12.8%w"
+        app:layout_widthPercent="95.7%w">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/edit_password" />
+
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/ed_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="请输入密码"
+            android:textCursorDrawable="@drawable/cursor_login"
+            app:layout_marginLeftPercent="19.2%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <Button
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text = "登录"
+        android:background="@drawable/bg_bt_login"
+        android:layout_gravity="center_horizontal"
+        app:layout_widthPercent="95.3%w"
+        android:layout_marginTop="10dp"
+        android:id="@+id/bt_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="11.3%w" />
+
+</com.zhy.android.percent.support.PercentLinearLayout>

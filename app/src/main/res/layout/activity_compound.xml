@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fysq.signapp2.MVP.OrderPreviewModule.OrderPreviewActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:theme="@style/ToolbarLightOverflow"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorAccent"
+        app:title="签名文件预览" />
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:id="@+id/rl_progress"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            wheel:matProg_barColor="#5588FF"
+            wheel:matProg_progressIndeterminate="true" />
+
+        <TextView
+            android:textSize="17sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/progress"
+            android:id="@+id/tv_hint"
+            android:layout_centerHorizontal="true"
+            android:text="合成签名文件中.."
+            android:textColor="#5588FF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_upload"
+        android:text="上传货单"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_bt_login"
+        android:layout_width="100dp"
+        android:layout_height="40dp" />
+</RelativeLayout>

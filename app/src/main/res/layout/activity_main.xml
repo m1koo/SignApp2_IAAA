@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:contentScaleClosed="1.0"
+    app:contentScaleOpen="1.0"
+    app:marginFactor="0.7"
+    app:menuScaleClosed="1.0"
+    app:menuScaleOpen="1.0">
+
+    <!--menu布局-->
+    <com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#efefef"
+        android:orientation="vertical"
+        android:tag="@string/tag_menu">
+
+        <android.support.v7.widget.Toolbar
+            android:theme="@style/ToolbarLightOverflow"
+            android:id="@+id/menu_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorAccent"
+            app:title="用户中心" />
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="18%h">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                android:textColor="@color/player_black"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="0dp"
+            app:layout_widthPercent = "70%w"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/rl_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:textColor="#5e5e5e"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="20dp"
+                        android:text="查看历史"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/rl_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:textColor="#5e5e5e"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="20dp"
+                        android:text="版本说明"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_centerHorizontal="true"
+                android:id="@+id/bt_logout"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40dp"
+                android:background="#f4821f"
+                android:text="退出登录"
+                android:textColor="@color/white" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:tag="@string/tag_content">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorAccent"
+            android:gravity="center_vertical"
+            android:theme="@style/ToolbarLightOverflow"
+            app:title="扫一扫" />
+
+        <ImageButton
+            android:id="@+id/bt_start_scan"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/ic_scanner"
+            app:layout_marginTopPercent="15%h" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="扫一扫"
+            android:textColor="#0994f0"
+            android:textSize="20sp" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+</nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>

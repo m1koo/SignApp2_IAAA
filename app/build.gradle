@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.fysq.signapp2",
+                JPUSH_APPKEY : "9290030805cb6982a013aab7", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+        applicationId "com.fysq.signapp2"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 3
+        versionName "1.3"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets.main {
+        jniLibs.srcDirs = ['libs']
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+
+ext {
+    anko_version = '0.10.1'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    compile 'com.zhy:percent-support-extends:1.1.1'
+    compile "org.jetbrains.anko:anko:$anko_version"
+    compile 'org.immutables:gson:2.4.3'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.2.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'nl.psdcompany:duo-navigation-drawer:2.0.6'
+    compile 'com.github.gcacace:signature-pad:1.2.1'
+    compile 'com.yanzhenjie:permission:1.1.2'
+    compile 'com.github.XuDaojie:QRCode-Android:v0.4.2'
+    compile 'com.pnikosis:materialish-progress:1.7'
+    compile 'org.dom4j:dom4j:2.0.0'
+    compile files('iText5.jar')
+    compile 'com.github.LuckSiege:PictureSelectorLight:v2.1.1'
+    compile 'top.zibin:Luban:1.1.3'
+    compile 'com.github.barteksc:android-pdf-viewer:3.0.0-beta.3'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:multidex:1.0.2'
+    compile 'com.aliyun.ams:alicloud-android-hotfix:3.1.7'
+    compile 'cn.jiguang.sdk:jpush:3.1.1'  // 此处以JPush 3.1.1 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.9'  // 此处以JCore 1.1.9 版本为例。
+    compile 'com.allenliu.versionchecklib:library:2.0.1'
+    compile project(':pkuiaaa_android-release')
+}

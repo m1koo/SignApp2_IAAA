@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fysq.signapp2">
+
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- 访问网络的变化, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 访问手机当前状态, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 阿里热更新 -->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="24719996-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="e6570183d168b7fe9e87a42007bc6e82" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCWR4yGnYEsHW52RiKqdzm/CA/fphIthAFj2TM1Y2cRuMGMYACJi/YKgf35/d+Wo6XTSOWj2Tgn8HnmRPhSasot7OOpQblv7dHlJtlrl78EgzOpZmXB5bxh1qEjTVWp6lcT5JjA8wPOK7YtAyqQNRSM7x5T+KEuxZdzynZJRk5p2ojkW/ULJ5jcsV6GpmOefdm+Dzh/xAxBpevrsYxiCjoQR0vwoFdcwWpm1WJsm6tfL1D8/cGGTf7yWbaCi3CVI5ka4d7II3TwuJxUfS+g7m+mwh5y39wsnArtn700WCvpUjzU3WToR77NxEVUUemwP8+oKrfq9Ow8Uy23eVDaZYtRAgMBAAECggEBAItVHTJ2eBxJ0W/xiRSZ5D19IRKQLExtFsjXycXXOunQbgtTu0vMK7wEWFFfk91cL1RdQyUOMiW9rZfVHJN1lazM9Sup11+ylSgsQ+ugzydE6jJG0VPcSDRCRjav7hvTPRchnItRBZczKf5D8EOyIzKkRW8/l1oBM3HVJqS7fdpfnrSL0qvApRC5Ppg6zENG8hcbWwQzpK8us876z0+55MfwdH+gN8a1b+CshiUJIcI/dlbP+Xqa2qGkGA/uG3ybLSYnJ9cZ4TbUIzWRknYuVuKn5n02EEA0Xa5MMViVZG/WBCvkjk2c295dcNV2IoZ3WilW9BoqdwWmjrFeEAnnaFECgYEA/xG+7/Y8bp+rWVKbtQzF+6Cq4cIY7kxPJeXYeng0125YD/zCneZe3v8MyVOZWVu4ShPBvqCXtO0jQzlB7VqMXXhCbJv/GNNwmRwF6516LhupPcffZzh8ReJ47/KbLQKeS128fCGNsKQGVdo+O7YYbwGtpNWVYND9JpiLiBxU2BUCgYEAltPr4Sq6e8bnbYAkIHyUjU2llQzWiaD6hygNKM4aJAoUwzapYRwrTM+hXud1LsYN0++Ma88qmmdvAhODyDgsggsDdNNaMpQpHAHmG5TdlT/BYSmcenAbyNuaaRVFK867k8q4vE+ERwSMJxpK2rJTSso4JG63xBORBseltHPMmU0CgYEA+B9DJhraXqJkBNgfL9flIAoDMOmnZuhEdhFIrJoSjR6B+8tdZkybLUHeJlp0akCW3Tiq181QxmeITfR89W+H68T4mL6HQJcuiUKBX9oo6IFv+PFdmQORoEnWa1QNL5PEeHwOxpG9S3/DyfAradqRmip/yEEctrmWCN2LnjQxNKECgYAy3HvqjlIcc1KPZmrIWbpufASeYpnmB1b0RNlLLVU7WfruaXxstucTG+E686pcf4UiNuGPaWjgcIjKlnIWDntTzwr3Vl5QOA40158VJfoi3kED1thhoXR9IzDKxtVwlGJE0FPDjLz6hdoNRZyAayoTSmXsQznM8RwywRhr5bDU8QKBgQCskM7st7DQZ8OxIBgBBCUPNPY4J4K6WEYNSlw+lQnA3wrED+rq/89YL8+cCqOWDsEIzQz/oXd0jNY1FNIT1mYsi8cmBoFiNtgFgcziTpcXQJf7SapuqpSLGhG5sC7RmdyeNuB/7FYgdrughW9ZRdpd85l6v9Kd72j0WQ9Qc2W8kQ==" />
+
+        <activity android:name=".MVP.LoginModule.LoginActivity">
+
+        </activity>
+        <activity android:name="io.github.xudaojie.qrcodelib.CaptureActivity" />
+        <activity
+            android:name=".MVP.MainModule.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".MVP.OrderPreviewModule.OrderPreviewActivity" />
+        <activity
+            android:name=".MVP.HandWriteModule.HandWritingActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".MVP.CompoundPdfPreviewModul.CompoundActivity" />
+        <activity android:name=".MVP.VersionModule.VerActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".MVP.HIstoryModule.HistoryActivity" />
+        <activity android:name=".IAAAActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
